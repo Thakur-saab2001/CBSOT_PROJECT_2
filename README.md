@@ -1,125 +1,126 @@
-# 📚 AI Research Paper Intelligence System
+# 🔎 AI Research Paper Intelligence System
 
-An intelligent research paper search system that leverages **Natural Language Processing (NLP)**, **Semantic Search**, and **Transformer models** to help users discover relevant Machine Learning research papers based on their meaning rather than exact keyword matches.
+An AI-powered research paper discovery system that uses **Semantic Search** and **Natural Language Processing (NLP)** to find relevant Machine Learning research papers based on the meaning of a user's query instead of exact keyword matching.
 
-The project converts research paper abstracts into semantic vector embeddings, performs fast similarity search using **FAISS**, and enhances the retrieved results with **automatic summarization** and **keyword extraction** for easier understanding.
-
----
-
-## 🚀 Features
-
-* 🔍 Semantic search over Machine Learning research papers
-* 🧠 Searches by meaning instead of exact keywords
-* ⚡ Fast vector similarity search using FAISS
-* 📝 Automatic research paper abstract summarization
-* 🏷️ Keyword extraction using KeyBERT
-* 📊 Interactive notebooks demonstrating the complete workflow
+The project demonstrates how transformer-based embeddings and vector similarity search can improve information retrieval from large collections of research papers.
 
 ---
 
-## 🎯 Project Workflow
+## 📌 Overview
 
-The system follows these steps:
+Searching research papers using traditional keyword search often misses relevant publications because different authors use different terminology.
 
-1. Load the Machine Learning research paper dataset.
-2. Clean and preprocess the paper metadata and abstracts.
-3. Generate semantic embeddings using a Sentence Transformer.
-4. Build a FAISS vector index for efficient similarity search.
-5. Convert the user's query into an embedding.
-6. Retrieve the most relevant research papers based on cosine similarity.
-7. Generate concise summaries of retrieved papers.
-8. Extract important keywords from each paper.
+This project addresses that challenge by converting research paper abstracts into dense vector embeddings and retrieving the most semantically similar papers using FAISS. To further improve usability, the retrieved papers are summarized automatically and their important topics are extracted.
 
 ---
 
-## 🧠 Architecture
+## ✨ Features
 
-```text
-                    ML-ArXiv Papers Dataset
-                              │
-                              ▼
-                  Data Cleaning & Preprocessing
-                              │
-                              ▼
-         SentenceTransformer (all-MiniLM-L6-v2)
-                  Text → Vector Embeddings
-                              │
-                              ▼
-                    FAISS Vector Index
-                              │
-                  User Query Embedding
-                              │
-                              ▼
-                Top-K Similar Research Papers
-                              │
-              ┌───────────────┴───────────────┐
-              ▼                               ▼
-     Abstract Summarization          Keyword Extraction
-              │                               │
-              └───────────────┬───────────────┘
-                              ▼
-                     Final Search Results
+- 📄 Load and preprocess Machine Learning research papers
+- 🧹 Data cleaning and preprocessing pipeline
+- 🤖 Generate semantic embeddings using Sentence Transformers
+- ⚡ Fast similarity search using FAISS
+- 📝 Automatic abstract summarization
+- 🔑 Keyword extraction using KeyBERT
+- 📊 Interactive search workflow in Jupyter Notebook
+
+---
+
+## 🔄 Project Pipeline
+
+```
+Research Papers Dataset
+        │
+        ▼
+Data Preprocessing
+        │
+        ▼
+Sentence Embeddings
+        │
+        ▼
+FAISS Vector Index
+        │
+        ▼
+Semantic Similarity Search
+        │
+        ▼
+Relevant Research Papers
+        │
+ ┌──────┴────────┐
+ ▼               ▼
+Summary      Keywords
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
-| Category                | Technologies                               |
-| ----------------------- | ------------------------------------------ |
-| Programming Language    | Python                                     |
-| Dataset                 | Hugging Face ML-ArXiv-Papers               |
-| Data Processing         | Pandas, NumPy                              |
-| NLP Embeddings          | Sentence Transformers (`all-MiniLM-L6-v2`) |
-| Vector Search           | FAISS                                      |
-| Summarization           | Hugging Face Transformers (DistilBART)     |
-| Keyword Extraction      | KeyBERT                                    |
-| Machine Learning        | Scikit-learn                               |
-| Development Environment | Jupyter Notebook                           |
+- Python
+- Pandas
+- NumPy
+- Sentence Transformers
+- Hugging Face Transformers
+- FAISS
+- KeyBERT
+- Scikit-learn
+- Jupyter Notebook
 
 ---
 
 ## 📂 Repository Structure
 
-```text
-AI-Research-Paper-Intelligence-System/
+```
+CBSOT_PROJECT_2/
 │
 ├── README.md
-├── requirements.txt
-├── AI_Research_paper_intelligence_system.ipynb
-└── Exploratory_Data_Analytics.ipynb
+├── EDA.ipynb
+└── AIResearchpapersystem.ipynb
 ```
-
-### Notebook Description
-
-**Exploratory_Data_Analytics.ipynb**
-
-* Load the ML-ArXiv Papers dataset
-* Explore the dataset
-* Clean missing and duplicate records
-* Prepare the data for semantic search
-
-**AI_Research_paper_intelligence_system.ipynb**
-
-* Generate sentence embeddings using Sentence Transformers
-* Build the FAISS vector index
-* Perform semantic similarity search
-* Generate summaries using DistilBART
-* Extract keywords using KeyBERT
 
 ---
 
-## ⚙️ Installation
+## 📘 Notebook Details
 
-Clone the repository:
+### 📙 EDA.ipynb
+
+This notebook focuses on:
+
+- Loading the dataset
+- Exploring research paper metadata
+- Handling missing values
+- Data preprocessing
+- Preparing text for embedding generation
+
+---
+
+### 📗 AIResearchpapersystem.ipynb
+
+This notebook covers:
+
+- Semantic embedding generation
+- Building a FAISS vector index
+- Semantic search implementation
+- Research paper summarization
+- Keyword extraction
+- Retrieving the most relevant papers
+
+---
+
+## 🚀 Installation
+
+Clone this repository
 
 ```bash
-git clone https://github.com/yourusername/AI-Research-Paper-Intelligence-System.git
-
-cd AI-Research-Paper-Intelligence-System
+git clone https://github.com/<your-username>/CBSOT_PROJECT_2.git
 ```
 
-Install the required dependencies:
+Move into the project directory
+
+```bash
+cd CBSOT_PROJECT_2
+```
+
+Install the required libraries
 
 ```bash
 pip install -r requirements.txt
@@ -127,62 +128,55 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the Project
+## ▶️ How to Run
 
-Open Jupyter Notebook or JupyterLab and execute the notebooks in the following order:
-
-1. **AI_Research_paper_intelligence_system.ipynb**
-2. **Exploratory_Data_Analytics.ipynb**
-
-The notebooks guide you through the complete pipeline, from preprocessing the dataset to building a semantic search engine for research papers.
+1. Open Jupyter Notebook.
+2. Run **EDA.ipynb** first.
+3. Then run **AIResearchpapersystem.ipynb**.
+4. Enter a research topic to retrieve similar Machine Learning papers.
 
 ---
 
-## 💡 Key Concepts Used
+## 📈 Future Scope
 
-* Natural Language Processing (NLP)
-* Sentence Embeddings
-* Semantic Search
-* Vector Similarity Search
-* FAISS Indexing
-* Transformer Models
-* Text Summarization
-* Keyword Extraction
-* Information Retrieval
+Some possible improvements include:
 
----
-
-## 📈 Future Improvements
-
-* Search filters by publication year, author, and category
-* Hybrid keyword + semantic search
-* Personalized paper recommendations
-* Research paper chatbot using Retrieval-Augmented Generation (RAG)
-* PDF upload and question answering
-* Streamlit web application deployment
-* Citation graph visualization
+- Research paper recommendation system
+- Hybrid search (keyword + semantic search)
+- Citation graph visualization
+- Search filters based on author, year, and category
+- Streamlit web application
+- RAG-based chatbot for research papers
 
 ---
 
-## 📚 Learning Outcomes
+## 🎯 Skills Demonstrated
 
-This project helped me gain practical experience in:
+- Data Preprocessing
+- Exploratory Data Analysis (EDA)
+- Natural Language Processing
+- Semantic Search
+- Transformer Models
+- Vector Databases (FAISS)
+- Information Retrieval
+- Text Summarization
+- Keyword Extraction
+- Python Programming
 
-* Data preprocessing
-* Text representation using embeddings
-* Transformer-based NLP models
-* Semantic information retrieval
-* Vector databases (FAISS)
-* Automatic text summarization
-* Keyword extraction
-* Building end-to-end NLP applications
+---
+
+## 📚 Dataset
+
+Machine Learning research papers were obtained from the **ML-ArXiv-Papers** dataset available on Hugging Face.
 
 ---
 
 ## 👨‍💻 Author
 
-**Aditya Kumar**
+**Rohit Kumar Thakur**
 
-Aspiring Machine Learning Engineer with interests in Artificial Intelligence, Natural Language Processing, Machine Learning, and Data Science.
+Machine Learning & Data Science Enthusiast
 
-If you found this project helpful, consider giving it a ⭐ on GitHub!
+---
+
+⭐ If you found this project interesting, consider giving this repository a star!
