@@ -1,4 +1,4 @@
-# 🔎 AI Research Paper Intelligence System
+# 🔎 AI Research Paper Intelligence System (Semantic Search Based & NLP Based)
 
 An AI-powered research paper discovery system that uses **Semantic Search** and **Natural Language Processing (NLP)** to find relevant Machine Learning research papers based on the meaning of a user's query instead of exact keyword matching.
 
