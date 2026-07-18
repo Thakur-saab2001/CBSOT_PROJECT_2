@@ -69,13 +69,14 @@ Summary      Keywords
 
 ## 📂 Repository Structure
 
-```
 CBSOT_PROJECT_2/
 │
 ├── README.md
+├── LICENSE
+├── .gitignore
+├── requirements.txt
 ├── EDA.ipynb
 └── AIResearchpapersystem.ipynb
-```
 
 ---
 
@@ -159,13 +160,34 @@ Some possible improvements include:
 - Keyword Extraction
 - Python Programming
 
----
 
-## 📚 Dataset
+## 📂 Dataset
 
-Machine Learning research papers were obtained from the **ML-ArXiv-Papers** dataset available on Hugging Face.
+This project uses the **ML ArXiv Papers** dataset available through Hugging Face.
 
----
+**Source**
+
+https://huggingface.co/datasets/CShorten/ML-ArXiv-Papers
+
+### Dataset Information
+
+- Research papers from arXiv
+- Machine Learning domain
+- Paper title
+- Abstract
+- Metadata
+
+The notebooks load the dataset directly using the Hugging Face `datasets` library:
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("CShorten/ML-ArXiv-Papers")
+```
+
+For computational efficiency, the project processes the first **50,000 papers** to generate sentence embeddings and build the FAISS index.
+
+
 
 ## 👨‍💻 Author
 
@@ -173,6 +195,4 @@ Machine Learning research papers were obtained from the **ML-ArXiv-Papers** data
 
 Machine Learning & Data Science Enthusiast
 
----
 
-⭐ If you found this project interesting, consider giving this repository a star!
