@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Streamlit
+.streamlit/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Cached embeddings
+data/arxiv_embeddings.npy
+
+# FAISS Index
+data/paper_faiss.index
+
+# Large CSV (optional)
+# data/cleaned_arxiv_papers.csv
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+
+# Build
+build/
+dist/
+
+# Python packaging
+*.egg-info/
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
